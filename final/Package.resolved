@@ -1,5 +1,5 @@
 {
-  "originHash" : "29e0b35f4b62e370b9657422555c98da585ef765113eed0d0bf0f5c09f9ab0e4",
+  "originHash" : "8a30aab087cf46837dd93c65eceae908e7da500dad6f34298f1b2bc2d145c83a",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -105,8 +105,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-cloud/swift-cloud.git",
       "state" : {
-        "revision" : "013fdd667af96943ff66234a739135b9d51180f4",
-        "version" : "0.8.0"
+        "revision" : "eb64faf11b859e3edd3c856b8e532255edbf96b8",
+        "version" : "0.9.0"
       }
     },
     {
