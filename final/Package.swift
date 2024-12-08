@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "HelloSwiftCloud",
     platforms: [
-        .macOS(.v13)
+        .macOS(.v14)
     ],
     products: [
         .executable(name: "HelloLambda", targets: ["HelloLambda"]),
@@ -16,7 +16,7 @@ let package = Package(
         .package(url: "https://github.com/swift-server/swift-aws-lambda-runtime.git", from: "1.0.0-alpha.2"),
         .package(url: "https://github.com/swift-server/swift-aws-lambda-events.git", branch: "main"),
         .package(url: "https://github.com/swift-server/async-http-client.git", from: "1.9.0"),
-        .package(url: "https://github.com/swift-cloud/swift-cloud.git", from: "0.9.0")
+        .package(url: "https://github.com/swift-cloud/swift-cloud.git", from: "0.16.0")
     ],
     targets: [
         .executableTarget(
@@ -37,7 +37,7 @@ let package = Package(
         .executableTarget(
             name: "Infra",
             dependencies: [
-                .product(name: "Cloud", package: "swift-cloud")
+                .product(name: "AWSCloud", package: "swift-cloud")
             ]
         )
     ]

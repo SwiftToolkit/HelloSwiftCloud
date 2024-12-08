@@ -1,7 +1,7 @@
-import Cloud
+import AWSCloud
 
 @main
-struct Project: Cloud.Project {
+struct Project: AWSProject {
     func build() async throws -> Outputs {
         let environment = ["stage": Context.current.stage]
 
@@ -22,9 +22,9 @@ struct Project: Cloud.Project {
             timeout: .seconds(10)
         )
 
-        return Outputs([
+        return [
             "HelloLambda": helloFunction.url,
             "FetchGitHubRelease": gitHubReleaseFunction.url
-        ])
+        ]
     }
 }
